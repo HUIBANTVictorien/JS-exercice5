@@ -5,15 +5,16 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form name="form">
+        <form>
             <label for="premier_nombre">Premier nombre à virgule : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
             <label for="deuxieme_nombre">Deuxième nombre à virgule : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
-            <button  id="valider" name ="valider" onClick="controle(form)">Valider</button>
+            <button  id="valider" name ="valider" onclick="display()">Valider</button>
         </form>
         <script>
-        function controle(form) {
-          var first = document.form.premier_nombre.value;
-          var second = document.form.deuxieme_nombre.value;
+        function display() {
+          var first = document.getElementById('premier_nombre').value;
+          var second = document.getElementById('deuxieme_nombre').value;
+          //variable qui supprime les décimales du premier input
           var premier = Math.trunc(first);
           alert(premier * second);
         };
