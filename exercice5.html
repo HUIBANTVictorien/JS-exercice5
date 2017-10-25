@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Exercice_5</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <form>
-            <label for="premier_nombre">Premier nombre à virgule : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
-            <label for="deuxieme_nombre">Deuxième nombre à virgule : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
-            <button  id="valider" name ="valider" onclick="display()">Valider</button>
-        </form>
-        <script>
-        function display() {
-          var first = document.getElementById('premier_nombre').value;
-          var second = document.getElementById('deuxieme_nombre').value;
-          //variable qui supprime les décimales du premier input
-          var one = Math.trunc(first);
-          alert(one * second);
-        };
-        </script>
-    </body>
+<head>
+  <title>Exercice_5</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <form>
+    <label for="premier_nombre">Premier nombre à virgule : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+    <label for="deuxieme_nombre">Deuxième nombre à virgule : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+    <button  id="valider" name ="valider" onclick="display()">Valider</button>
+  </form>
+  <script>
+  function display() {
+    var first = document.getElementById('premier_nombre').value;
+    var second = document.getElementById('deuxieme_nombre').value;
+    //variable qui supprime les décimales du premier input
+    var one = Math.trunc(first);
+    if(isNaN(first) == false && isNaN(second) == false) {
+      alert(one * second);
+    }
+  };
+  </script>
+</body>
 </html>
